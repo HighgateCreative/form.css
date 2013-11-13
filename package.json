@@ -17,5 +17,13 @@
   "author": "Brad Cathey",
   "license": "GPLv2",
   "readmeFilename": "README.md",
-  "gitHead": "74d7edd95b88f87d415e20bf79c98dd08cdfea06"
+  "gitHead": "74d7edd95b88f87d415e20bf79c98dd08cdfea06",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-jshint": "~0.7.1"
+  }
 }
