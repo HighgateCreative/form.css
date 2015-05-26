@@ -33,7 +33,6 @@ p.wrap b, p.wrap strong, .blabel {
    text-align: right;
    width: 100px;
 }
-
 p.wrap  {
    width: 100%;
    clear:both;
@@ -42,41 +41,39 @@ p.wrap  {
 p.inline {
  margin: 9px 0 0 0;
 }
-
 p.submit_button_row {
    margin-top: 12px;
 }
 .disabled {
    opacity: 0.40;
 }
-
-input[type="text"], input[type="email"], input[type="password"] { width: 240px; margin-top: 0 }
-input[type="checkbox"] {margin: 0 5px 4px 0 } 
-input[type="radio"] {margin: 5px 2px 0 0 } 
-input[id=submitBtn] {margin: 10px  0 0 } 
+input[type="text"], input[type="email"], input[type="password"] { width: 280px; margin-top: 0 }
+input[type="checkbox"] { margin: 0 5px 4px 0 } 
+input[type="radio"] { margin: 5px 2px 0 0 } 
+input[id=submitBtn] { margin: 10px  0 0 } 
 label.nextto { display: inline } /*for checkboxes and radios */
 
 input[type="text"], input[type="password"], input[type="email"], textarea {
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px; 
 	border: 2px solid #ccc;
 	padding: 2px 4px;
-	height: 26px;
+	height: 30px;
 }
-
+input#server_image {
+   border: none;
+ }
 textarea {
    height: 100px;
    width: 390px;
 }
-
 input[type="text"]:focus,input[type="password"]:focus, input[type="email"]:focus,  textarea:focus {
    background: #fff;
-   -webkit-box-shadow: 0px 0px 2px 1px #7aa3e8;
-   -moz-box-shadow:    0px 0px 2px 1px #7aa3e8;
-   box-shadow:         0px 0px 2px 1px #7aa3e8;
+   box-shadow: 0px 0px 6px 2px #7aa3e8;
 }
-
+p.wrap span {
+   padding-right: 10px;
+}
 p.wrap span.text_under_field {
    display: block;
    padding: 10px 0 0 0;
@@ -92,21 +89,15 @@ select {
    width: 203px;
    padding: 4px;
    background: #e7e7e7; /* Old browsers */
-   background: -moz-linear-gradient(top, #e7e7e7 0%, #fefefe 100); /* FF3.6+ */
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e7e7e7), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
-   background: -webkit-linear-gradient(top, #e7e7e7 0%,#fefefe 100); /* Chrome10+,Safari5.1+ */
-   background: -o-linear-gradient(top, #e7e7e7 0%,#fefefe 100); /* Opera 11.10+ */
-   background: -ms-linear-gradient(top, #e7e7e7 0%,#fefefe 100); /* IE10+ */
-   background: linear-gradient(to bottom, #e7e7e7 0%,#fefefe 100); /* W3C */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
-   -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
-   box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+   background: -webkit-linear-gradient(top, #e7e7e7 0%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, #e7e7e7 0%,#fefefe 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, #e7e7e7 0%,#fefefe 100%); /* IE10+ */
+   background: linear-gradient(to bottom, #e7e7e7 0%,#fefefe 100%); /* W3C */
+   -webkit-box-shadow: 0 0 2px 2px #fefefe;
+   box-shadow: 0 0 2px 2px #fefefe;
 }
 
 /* fancy select (chosen) */
-.chzn-single {
-   width: 195px;
-}
 .chzn-single span {
    padding: 5px 0 0 0;
 }
@@ -134,13 +125,17 @@ input.counter { clear: both; width: 40px } /* for textarea counters */
 p.error {
    color: #c00;
 }
-#msgs { 
+#msgs, .msgs { 
    display: none; 
 }      
 p.success {
    padding:  0 0 4px 20px;
    color: #2b9a00;
    background: url(/images/success.png) no-repeat 0px 0px;
+}
+p.success a {
+   display: block;
+   margin: 10px 0 0 0;
 }
 
 /* login screen, others? */
@@ -206,7 +201,7 @@ input#order_by { width: 40px; text-align: right; }
 
 /*-------------- overlay -------------------- */
 #overlay {
-   background:none repeat scroll 0 0 #666666;
+   background:none repeat scroll 0 0 #777;
    display:none;
    height:100%;
    left:0;
@@ -228,50 +223,22 @@ BUTTONS
 /* replace 'lighter-color' with lighter hex, and 'darker-color' with darker hex*/
 
 a.button, input.button, a.small_button, input.small_button {
-background: #d6cfc9; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q2Y2ZjOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4NzgzNmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #d6cfc9 0%, #87836e 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6cfc9), color-stop(100%,#87836e)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #d6cfc9 0%,#87836e 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #d6cfc9 0%,#87836e 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #d6cfc9 0%,#87836e 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #d6cfc9 0%,#87836e 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6cfc9', endColorstr='#87836e',GradientType=0 ); /* IE6-8 */
-
-   border:1px solid #87836e;
-   text-shadow:-1px -1px 0px #999;
-   color:#fff;
-   -moz-border-radius:4px;
-   -webkit-border-radius:4px;
-   border-radius:4px;
-   display:inline-block;
-   font-family:Verdana;
-   font-size:14px;
-   font-weight: normal;
-   padding:4px 20px 6px;
-   text-decoration:none;
-      /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99B4B490,endColorstr=#99B4B490);
-   zoom: 1;*/
+   background: #999;
+   color: #fff;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   font-size: 16px;
+   text-decoration: none;
+   border:none;
+   letter-spacing: 0;
+   padding: 8px 20px 7px;
 }
-
 a.button:hover, input.button:hover, a.small_button:hover, input.small_button:hover {
-   color: #eee;
-   text-shadow:1px 1px 0px #888;
-   -webkit-box-shadow: 0px 0px 2px 1px #bbb;
-   -moz-box-shadow:    0px 0px 2px 1px #bbb;
-   box-shadow:         0px 0px 2px 1px #bbb;
-}
-a.button:active, input.button:active, a.small_button:active, input.small_button:active {
-   position:relative;
-   top:1px;
+   opacity: .5;
 }
 a.small_button, input.small_button {
-   -moz-border-radius:3px;
-   -webkit-border-radius:3px;
-   border-radius:3px;
-   font-size:11px;
-   padding:1px 6px 2px 6px;
+   font-size: 13px;
+   padding: 1px 8px 2px 8px;
 } 
 
 p.edit_link_block {
