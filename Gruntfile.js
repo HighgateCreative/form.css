@@ -20,6 +20,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/css',
+          src: ['*.scss'],
+          dest: '../dist/css',
+          ext: '.css'
+        }]
+      }
+    },
     watch: {
       css: {
         files: 'src/**/*.css',
@@ -32,9 +46,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task.
-  grunt.registerTask('default', ['cssmin']);
-  grunt.registerTask('min', ['cssmin']);
+  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('min', ['sass', 'cssmin']);
 
 };
