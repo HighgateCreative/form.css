@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: 'src/**/*.css',
+        files: 'src/**/*.scss',
         tasks: ['min']
       },
     }
