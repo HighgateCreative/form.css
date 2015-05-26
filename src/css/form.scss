@@ -47,13 +47,13 @@ p.submit_button_row {
 .disabled {
    opacity: 0.40;
 }
-input[type="text"], input[type="email"], input[type="password"] { width: 280px; margin-top: 0 }
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] { width: 280px; margin-top: 0 }
 input[type="checkbox"] { margin: 0 5px 4px 0 } 
 input[type="radio"] { margin: 5px 2px 0 0 } 
 input[id=submitBtn] { margin: 10px  0 0 } 
 label.nextto { display: inline } /*for checkboxes and radios */
 
-input[type="text"], input[type="password"], input[type="email"], textarea {
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], textarea {
 	-webkit-border-radius: 3px;
 	border-radius: 3px; 
 	border: 2px solid #ccc;
@@ -67,7 +67,7 @@ textarea {
    height: 100px;
    width: 390px;
 }
-input[type="text"]:focus,input[type="password"]:focus, input[type="email"]:focus,  textarea:focus {
+input[type="text"]:focus,input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus  textarea:focus {
    background: #fff;
    box-shadow: 0px 0px 6px 2px #7aa3e8;
 }
