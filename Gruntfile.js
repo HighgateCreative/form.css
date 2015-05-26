@@ -16,7 +16,7 @@ module.exports = function(grunt) {
           banner: '<%= banner %>'
         },
         files: {
-          'dist/css/form.css': ['src/css/**/*.css']
+          'dist/css/form.min.css': ['dist/css/form.css']
         }
       }
     },
@@ -26,10 +26,8 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: [{
-          expand: true,
-          cwd: 'src/css',
-          src: ['*.scss'],
-          dest: '../dist/css',
+          src: ['src/**/*.scss'],
+          dest: 'dist/css/form.css',
           ext: '.css'
         }]
       }
