@@ -22,7 +22,6 @@ label,
 p.success,
 p.error,
 ul.error li,
-.list,
 a.button, a.small_button,
 input.button, input.small_button,
 button.button, button.small_button,
@@ -234,32 +233,6 @@ ul.error li {
 input.opinion {
   /*as a catcha*/
   display: none;
-}
-
-.list {
-  width: 90%;
-  margin: 0 0 10px 20px;
-}
-
-.list th {
-  padding: 2px 6px 3px 6px;
-  background-color: #E1D8C7;
-  /*change*/
-  text-align: left;
-}
-
-.list td {
-  padding: 2px 0 3px 6px;
-}
-
-.list td.rt_align, .list th.rt_align {
-  text-align: right;
-  padding-right: 4px;
-}
-
-p.wrap.list {
-  margin-left: 20px;
-  padding-bottom: 10px;
 }
 
 /* category ecomm discounts */
