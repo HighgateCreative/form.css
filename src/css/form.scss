@@ -9,10 +9,25 @@ label {
    display: block;
 }
 
-.checkbox_label, p.wrap, input, textarea,.label, .blabel, select, label,
-.chzn-single span, .chzn-results li, p.success, p.error, ul.error li,
-.list, a.button, input.button, a.small_button, input.small_button,
-a.edit_link, p.wrap span 
+.checkbox_label,
+p.wrap,
+input,
+textarea,
+.label,
+.blabel,
+select,
+label,
+.chzn-single span,
+.chzn-results li,
+p.success,
+p.error,
+ul.error li,
+.list,
+a.button, a.small_button,
+input.button, input.small_button,
+button.button, button.small_button,
+a.edit_link,
+p.wrap span 
 {
    font-family: 'fira_sansbook',Verdana, sans-serif;
    color: #444;  /* <<=== CHANGE */
@@ -222,24 +237,28 @@ BUTTONS
 ---------------------------------------------------------------------- */
 /* replace 'lighter-color' with lighter hex, and 'darker-color' with darker hex*/
 
-a.button, input.button, a.small_button, input.small_button {
-   background: #999;
-   color: #fff;
-   -webkit-border-radius: 3px;
-   border-radius: 3px;
-   font-size: 16px;
-   text-decoration: none;
-   border:none;
-   letter-spacing: 0;
-   padding: 8px 20px 7px;
+a, input, button {
+   &.button, &.small_button {
+      background: #999;
+      color: #fff;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      font-size: 16px;
+      text-decoration: none;
+      border:none;
+      letter-spacing: 0;
+      padding: 8px 20px 7px;
+
+      &:hover {
+         opacity: .5;
+      }
+   }
+
+   &.small_button {
+      font-size: 13px;
+      padding: 1px 8px 2px 8px;
+   }
 }
-a.button:hover, input.button:hover, a.small_button:hover, input.small_button:hover {
-   opacity: .5;
-}
-a.small_button, input.small_button {
-   font-size: 13px;
-   padding: 1px 8px 2px 8px;
-} 
 
 p.edit_link_block {
    position: absolute;
