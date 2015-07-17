@@ -230,8 +230,12 @@ ul.error li {
   background: #ddd;
 }
 
-input.opinion {
-  /*as a catcha*/
+/* Opinion Captcha
+ * Hides field as a rudimentary captcha against bots who fill out any field.
+ * Both input.opinion and p.opinion since just the field or the entire
+ * label/field combo may be hidden.
+ */
+input.opinion, p.opinion {
   display: none;
 }
 
