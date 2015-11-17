@@ -296,6 +296,7 @@ a.button, a.small_button, input.button, input.small_button, button.button, butto
   border: none;
   letter-spacing: 0;
   padding: 8px 20px 7px;
+  display: inline-block;
 }
 a.button:hover, a.small_button:hover, input.button:hover, input.small_button:hover, button.button:hover, button.small_button:hover {
   opacity: .5;
