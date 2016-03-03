@@ -220,7 +220,7 @@ BUTTONS
 ---------------------------------------------------------------------- */
 /* replace 'lighter-color' with lighter hex, and 'darker-color' with darker hex*/
 
-a, input, button, input[type=button] {
+a, input, button {
    &.button, &.small_button {
       background: #999;
       color: #fff;
@@ -244,6 +244,24 @@ a, input, button, input[type=button] {
       padding: 1px 8px 2px 8px;
    }
 }
+
+input[type=button] {
+      background: #999;
+      color: #fff;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      font-size: 16px;
+      text-decoration: none;
+      border:none;
+      letter-spacing: 0;
+      padding: 8px 20px 7px;
+      display: inline-block;
+
+      &:hover {
+         opacity: .5;
+         color: #ffffff;
+      }
+   }
 
 p.edit_link_block {
    position: absolute;
