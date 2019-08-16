@@ -153,15 +153,25 @@ select {
   line-height: 18px;
   padding: 0 7px 2px 0;
 }
-
 .error_label {
   /* Default ajax error styling. */
+  font-family: 'fira_sansbook',Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
   color: #c00;
 }
-
 .success_label {
   /* Default ajax error styling. */
-  color: green;
+  font-family: 'fira_sansbook',Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(0, 202, 45);
+}
+.error_label::first-letter, 
+.success_label::first-letter, 
+.label::first-letter, 
+.blabel::first-letter {
+    text-transform: uppercase;
 }
 
 .errors_above {
